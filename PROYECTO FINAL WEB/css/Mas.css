@@ -1,0 +1,64 @@
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+}
+
+.hero {
+    height: 90vh;
+    background-image: url('../imagenes/LOGO OJEDA.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+}
+
+.hero .btn {
+    font-size: 1.2rem;
+}
+
+.card .price {
+    font-weight: bold;
+    color: #e74c3c;
+    font-size: 1.2rem;
+}
+
+section#opsiones .bi {
+    background-color: #f1c40f;
+    color: white;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+section#pantalones .card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+section#platillos .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#galeria img {
+    transition: transform 0.3s;
+}
+
+#galeria img:hover {
+    transform: scale(1.05);
+}

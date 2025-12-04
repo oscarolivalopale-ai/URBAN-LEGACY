@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi Refresh</title>
+    <link rel="stylesheet" href="css/informacion.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Fredericka+the+Great&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="imagenes/LOGO OJEDA.jpeg" alt="Logo Pepsi">
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Promociones</a></li>
+                <li><a href="#">Contacto</a></li>
+                
+            </ul>
+        </nav>
+
+        <div class="menu-btn" id="menu-btn"></div>
+    </header>
+
+    <main class="hero">
+        <section class="hero-text">
+            <h1>ES <span>URBAN LEGAY</span> y ya es virtual</h1>
+            <p>
+                Tienda de ropa en line mas economica y
+                de buena calidad
+            </p>
+            <a href="#" class="btn">Ver Productos</a>
+        </section>
+
+        <section class="hero-img">
+            <img src="imagenes/chamarra.jpeg" alt="Pepsi Clásica" id="main-can">
+        </section>
+    </main>
+
+    <section class="cans-selector">
+        <img src="imagenes/mesclilla.jpeg" alt="Clásica" data-img="imagenes/pepsi-clasica.png">
+        <img src="imagenes/formal.jpeg" alt="Light" data-img="imagenes/pepsi-light.png">
+        <img src="imagenes/polo.jpeg" alt="Zero" data-img="imagenes/pepsi-zero.png">
+    </section>
+
+    <aside class="social">
+        <a href="#"><img src="imagenes/face.png" alt="Facebook"></a>
+        <a href="#"><img src="imagenes/insta.jpeg" alt="Instagram"></a>
+        <a href="#"><img src="imagenes/tiktok.png" alt="Twitter"></a>
+    </aside>
+
+    <script>
+        // Cambiar lata al hacer clic
+        const cans = document.querySelectorAll(".cans-selector img");
+        const mainCan = document.getElementById("main-can");
+
+        cans.forEach(can => {
+            can.addEventListener("click", () => {
+                mainCan.src = can.dataset.img;
+            });
+        });
+
+        // Abrir menú móvil
+        const menuBtn = document.getElementById("menu-btn");
+        const nav = document.querySelector(".nav");
+
+        menuBtn.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>

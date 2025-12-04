@@ -1,0 +1,178 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Bungee", sans-serif;
+    background: white;
+    color: black;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header{
+    width: 100%;
+    padding: 15px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img{
+    width: 55px;
+}
+
+.nav ul{
+    display: flex;
+    gap: 30px;
+}
+
+.nav ul li{
+    list-style: none;
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: .3s;
+}
+
+.nav a:hover{
+    color: #f04337;
+}
+
+/* Botón hamburguesa */
+.menu-btn{
+    width: 32px;
+    height: 25px;
+    background-image: url("../imagenes/menu-icon.png");
+    background-size: cover;
+    cursor: pointer;
+    display: none;
+}
+
+/* HERO */
+.hero{
+    width: 90%;
+    margin: 10px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 50px 0;
+}
+
+.hero-text{
+    max-width: 540px;
+}
+
+.hero-text h1{
+    font-size: 3.5rem;
+    line-height: 1.2;
+}
+
+.hero-text h1 span{
+    color: #f04337;
+}
+
+.hero-text p{
+    margin: 20px 0;
+    font-size: 1.2rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 12px 25px;
+    background: #f04337;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+    transition: .3s;
+}
+
+.btn:hover{
+    background: #ff675c;
+}
+
+.hero-img img{
+    width: 300px;
+    transition: .4s;
+}
+
+.hero-img img:hover{
+    transform: rotate(-10deg) scale(1.05);
+}
+
+/* LATAS INFERIORES */
+.cans-selector{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 40px 0;
+}
+
+.cans-selector img{
+    width: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cans-selector img:hover{
+    transform: translateY(-10px);
+}
+
+/* REDES SOCIALES */
+.social{
+    position: fixed;
+    right: 20px;
+    top: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    filter: invert(1);
+}
+
+.social img{
+    width: 30px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px){
+
+    .menu-btn{
+        display: block;
+    }
+
+    .nav{
+        position: absolute;
+        top: 90px;
+        right: -200px;
+        background: rgba(0,0,0,0.3);
+        padding: 20px;
+        border-radius: 15px;
+        transition: .4s;
+    }
+
+    .nav.active{
+        right: 20px;
+    }
+
+    .nav ul{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img img{
+        margin-top: 30px;
+        width: 250px;
+    }
+}
